@@ -11,8 +11,8 @@ console.log(fakeProducts)
         <RouterLink :to="`/product/${item.id}`">
           <img :src="item.image" :alt="item.name" />
           <h1>{{ item.name }}</h1>
+          <p>{{ item.price }}</p>
         </RouterLink>
-        <p>{{ item.price }}</p>
       </li>
     </ul>
   </div>
@@ -21,14 +21,11 @@ console.log(fakeProducts)
 <style lang="scss">
 .product {
   ul {
+    text-decoration: none;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     li {
     }
-  }
-  img {
-    width: 100%;
-    height: auto;
   }
 }
 </style>
